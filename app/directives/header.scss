@@ -5,6 +5,9 @@ $header-height: 60px;
 #banner {
   width: 100%;
   height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
 
   background-color: rgba(32, 26, 22, 0.901961);
 
@@ -18,6 +21,10 @@ $header-height: 60px;
       line-height: $header-height;
       float: left;
       padding-right: 10px;
+
+      a {
+        color: white;
+      }
     }
   }
 }
