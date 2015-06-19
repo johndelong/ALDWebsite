@@ -1,4 +1,4 @@
-angular.module('angularSeed.homepage')
+angular.module('ALDWebsite.homepage')
 .controller 'HomepageCtrl', ->
 
   @value = "world"

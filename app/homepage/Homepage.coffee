@@ -1,10 +1,10 @@
-angular.module 'angularSeed.homepage', [
+module = angular.module 'ALDWebsite.homepage', [
   'ui.router'
 ]
 
-angular.module('angularSeed.homepage').config ($stateProvider) ->
+module.config ($stateProvider) ->
   $stateProvider
-    .state 'homepage',
+    .state 'home',
       url: '/'
       templateUrl: '/homepage/homepage.html'
       controller: 'HomepageCtrl as home'

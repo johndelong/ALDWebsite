@@ -1,31 +1,33 @@
 # Declare the main module and dependencies
-angular.module('angularSeed', [
+module = angular.module('ALDWebsite', [
   # External modules
   'ui.router'
   'angular-loading-bar'
 
   # Our modules
-  'angularSeed.homepage'
+  'ALDWebsite.homepage'
+  'ALDWebsite.contact'
 ])
 
 
-angular.module('angularSeed').config ($locationProvider) ->
+module.config ($locationProvider) ->
   $locationProvider.html5Mode(enabled: true, requireBase: false)
 
-angular.module('angularSeed').config ($urlRouterProvider) ->
+# For any unmatched url, route here
+module.config ($urlRouterProvider) ->
   $urlRouterProvider.otherwise('/')
 
-angular.module('angularSeed').config ($httpProvider) ->
+module.config ($httpProvider) ->
   $httpProvider.defaults.withCredentials = true
   $httpProvider.defaults.headers.delete = {'Content-Type': 'application/json'}
 
-angular.module('angularSeed').config (cfpLoadingBarProvider) ->
+module.config (cfpLoadingBarProvider) ->
   cfpLoadingBarProvider.includeSpinner = false
   cfpLoadingBarProvider.latencyThreshold = 250
 
 # We have to have $state here, to avoid this bug:
 # https://github.com/angular-ui/ui-router/issues/679#issuecomment-31116942
-angular.module('angularSeed').run ($state, $rootScope) ->
+module.run ($state, $rootScope) ->
 
   # UI Router silently swallows errors on resolve. This exposes them.
   $rootScope.$on '$stateChangeError',

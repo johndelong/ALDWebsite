@@ -1,0 +1,23 @@
+@import 'imports';
+
+$header-height: 60px;
+
+#banner {
+  width: 100%;
+  height: $header-height;
+
+  background-color: rgba(32, 26, 22, 0.901961);
+
+  .menu-items {
+    float: right;
+    color: white;
+
+    li {
+      display: block;
+      height: $header-height;
+      line-height: $header-height;
+      float: left;
+      padding-right: 10px;
+    }
+  }
+}

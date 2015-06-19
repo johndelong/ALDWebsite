@@ -1,5 +1,5 @@
 describe "HomepageCtrl:", ->
-  beforeEach(module("angularSeed.homepage"))
+  beforeEach(module("ALDWebsite.homepage"))
 
   beforeEach inject ($controller) ->
     @controllerService = $controller

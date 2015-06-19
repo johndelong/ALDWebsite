@@ -1,4 +1,4 @@
-angular.module('angularSeed.config', [])
+angular.module('ALDWebsite.config', [])
 
-angular.module('angularSeed.config').constant "config",
+angular.module('ALDWebsite.config').constant "config",
   apiBase: "http://localhost:5000"
