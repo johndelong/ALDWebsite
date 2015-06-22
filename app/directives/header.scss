@@ -2,6 +2,15 @@
 
 $header-height: 85px;
 
+//
+// @media screen and (max-width: $break-small) {
+//     width: 100px;
+//     float: none;
+//   }
+//   @media screen and (min-width: $break-large) {
+//     float: right;
+//   }
+
 #banner {
   width: 100%;
   height: $header-height;
@@ -32,15 +41,18 @@ $header-height: 85px;
     padding-right: 15px;
     font-size: 13px;
 
-    &:link,
-    &:visited {
-      color: white;
-    }
+    // &:link,
+    // &:visited {
+    //   color: white;
+    // }
+
 
     &:active,
+    &:focus,
     &:hover {
       color: #9c9999;
     }
+
 
     &.call-to-action {
       transition: none;
@@ -49,7 +61,7 @@ $header-height: 85px;
       border-style: solid;
       border-color: white;
       border-width: 2px;
-      padding: 13px 19px 13px 19px;
+      padding: 11px 22px;
       margin-left: 13px;
 
       &:hover {
