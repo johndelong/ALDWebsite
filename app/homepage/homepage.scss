@@ -1,7 +1,61 @@
 @import 'imports';
 
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
 #homepage {
-  margin: $base-spacing;
+  margin: 0 auto;
+  padding: 96px 32px;
+  max-width: 1020px;
+
+  .greeting {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 21px;
+      font-size: 42px;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+  }
+
+  .row {
+    margin-right: -17px;
+    margin-left: -17px;
+  }
+
+  .grouping {
+    float: left;
+    width: 50%;
+
+    @media only screen and (max-width: 640px) {
+      float: none;
+      width: auto;
+    }
+  }
+
+  .img-block {
+    padding: 17px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .text-block {
+    padding: 17px;
+  }
 }
 
 .banner-wrapper {
@@ -22,10 +76,8 @@
   }
 
   .title-desc-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    @include center;
+
     z-index: 100;
     margin: 0 auto;
     width: 100%;
@@ -34,13 +86,13 @@
     font-weight: 300;
 
     .title {
-      font-size: 70px;
+      font-size: 86px;
     }
 
     .title-desc {
       letter-spacing: 3px;
       color: rgb(156, 153, 153);
-      font-size: 26px;
+      font-size: 28px;
     }
   }
 }
