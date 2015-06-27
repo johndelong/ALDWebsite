@@ -1,5 +1,6 @@
 module = angular.module 'ALDWebsite.homepage', [
   'ui.router'
+  'sticky'
 ]
 
 module.config ($stateProvider) ->

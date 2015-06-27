@@ -1,0 +1,78 @@
+@import 'imports';
+
+$header-height: 85px;
+$break-small: 640px;
+
+.top-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.scroll-header {
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+  background-color: rgba(32, 26, 22, 0.901961);
+  width: 100%;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    height: $header-height;
+  }
+}
+
+.header-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+  height: $header-height;
+
+  .menu-items {
+    float: right;
+    color: $white;
+
+    li {
+      display: block;
+      float: left;
+      height: $header-height;
+      line-height: $header-height;
+    }
+  }
+
+  a {
+    padding-right: 15px;
+    padding-left: 15px;
+    color: $white;
+    font-size: 13px;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: #9c9999;
+    }
+
+    &.call-to-action {
+      transition: background-color 0.1s ease-in-out;
+      margin-left: 13px;
+      border-width: 2px;
+      border-style: solid;
+      border-color: $white;
+      padding: 11px 22px;
+
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-small) {
+    a {
+      display: none;
+    }
+  }
+}
