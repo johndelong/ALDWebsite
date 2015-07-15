@@ -36,7 +36,7 @@ A seed project for Angular
 
 Deployment to an S3 bucket is done in one command. You only need to specify the destination bucket and the desired config file to use
 
-    gulp deploy --bucket my-bucket-name.mutuallyhuman.com --config staging
+    gulp deploy --bucket my-bucket-name.example.com --config staging
 
 AWS credentials are read from `~/.aws/credentials`.
 
