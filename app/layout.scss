@@ -10,15 +10,9 @@
   overflow: hidden;
 }
 
-// .col {
-//   float: left;
-//   width: auto;
-//   
-//   @media only screen and (max-width: 640px) {
-//     float: none;
-//     width: auto;
-//   }
-// }
+.col {
+  @include col-width(100%);
+}
 
 .img-block {
   padding: 17px;
