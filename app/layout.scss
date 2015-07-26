@@ -1,0 +1,34 @@
+@import 'imports';
+
+.content {
+  margin: 0 auto;
+  padding: 96px 15px;
+  max-width: 1020px;
+}
+
+.row {
+  overflow: hidden;
+}
+
+// .col {
+//   float: left;
+//   width: auto;
+//   
+//   @media only screen and (max-width: 640px) {
+//     float: none;
+//     width: auto;
+//   }
+// }
+
+.img-block {
+  padding: 17px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.text-block {
+  padding: 17px;
+}

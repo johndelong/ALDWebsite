@@ -1,9 +1,9 @@
 @import 'imports';
 
 #homepage {
-  margin: 0 auto;
-  padding: 96px 32px;
-  max-width: 1020px;
+  .col {
+    @include col-width(50%);
+  }
 
   .greeting {
     width: 100%;
@@ -20,36 +20,6 @@
       font-size: 18px;
     }
 
-  }
-
-  .row {
-    display: table;
-    margin-right: -17px;
-    margin-left: -17px;
-  }
-
-  .grouping {
-    float: left;
-    // display: inline-block;
-    width: 50%;
-    
-    @media only screen and (max-width: 640px) {
-      float: none;
-      width: auto;
-    }
-  }
-
-  .img-block {
-    padding: 17px;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .text-block {
-    padding: 17px;
   }
 }
 
