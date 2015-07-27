@@ -7,5 +7,5 @@ module.config ($stateProvider) ->
   $stateProvider
     .state 'home',
       url: '/'
-      templateUrl: '/homepage/homepage.html'
+      templateUrl: '/pages/homepage/homepage.html'
       controller: 'HomepageCtrl as home'
