@@ -26,9 +26,10 @@
   </head>
 
   <body ng-app="ALDWebsite" ng-strict-di>
-
+    <div class="top-header" ng-include="'/navigation/main-menu.html'"></div>
     <ui-view autoscroll="true"></ui-view>
-
+    <div ng-include="'/footer/preFooter/preFooter.html'"></div>
+    <div ng-include="'/footer/footer.html'"></div>
     <!-- inject:external_scripts:html -->
     <!-- endinject -->
   </body>
