@@ -1,5 +1,11 @@
 @import 'imports';
 
 #about {
+  .heading-col {
+    @include col-width(25%)
+  }
   
+  .content-col {
+    @include col-width(75%)
+  }
 }

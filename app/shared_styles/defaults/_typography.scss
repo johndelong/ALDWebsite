@@ -17,12 +17,20 @@ h6 {
   margin: 0 0 $small-spacing;
   line-height: $heading-line-height;
   font-family: $heading-font-family;
-  font-size: $base-font-size;
+  font-size: $base-font-size * 2;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.125em;
+  font-weight: bold;
+  letter-spacing: 4px;
 }
 
 p {
+  // padding: 0.95em;
   margin: 0;
-  font-size: 1.2em;
+  font-size: $base-font-size;
 }
 
 a {
@@ -43,7 +51,7 @@ a {
 }
 
 hr {
-  margin: $base-spacing 0;
+  margin: 32px 0;
   border-top: none;
   border-right: none;
   border-bottom: $base-border;

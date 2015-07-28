@@ -6,4 +6,4 @@ module.config ($stateProvider) ->
   $stateProvider
     .state 'contact',
       url: '/contact'
-      templateUrl: '/contact/contact.html'
+      templateUrl: '/pages/contact/contact.html'

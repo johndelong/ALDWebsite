@@ -7,6 +7,7 @@ module = angular.module('ALDWebsite', [
   # Our modules
   'ALDWebsite.homepage'
   'ALDWebsite.contact'
+  'ALDWebsite.about'
 ])
 
 
