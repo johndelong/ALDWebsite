@@ -8,4 +8,8 @@
   .content-col {
     @include col-width(75%)
   }
+  
+  .angular-google-map-container { 
+    height: 400px;
+  }
 }
