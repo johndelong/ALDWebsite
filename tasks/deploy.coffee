@@ -8,7 +8,7 @@ _ = require('lodash')
 
 gulp.task 'deploy', ['build/dist'], ->
 
-  publisher = awspublish.create({ bucket: argv.bucket })
+  publisher = awspublish.create({ region: 'us-west-2', bucket: argv.bucket })
 
   gulp.src('build/dist/**/*')
     .pipe(awspublishRouter(
