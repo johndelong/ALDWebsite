@@ -19,7 +19,7 @@ module.config ($urlRouterProvider) ->
   $urlRouterProvider.otherwise('/')
 
 module.config ($httpProvider) ->
-  $httpProvider.defaults.withCredentials = true
+  $httpProvider.defaults.withCredentials = false
   $httpProvider.defaults.headers.delete = {'Content-Type': 'application/json'}
 
 module.config (cfpLoadingBarProvider) ->
