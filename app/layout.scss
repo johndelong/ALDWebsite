@@ -7,23 +7,12 @@
   @include transform(translate(-50%, -50%));
 }
 
-// @mixin col-width($width) {
-//   float: left;
-//   width: $width;
-//   
-//   @media only screen and (max-width: 640px) {
-//     float: none;
-//     width: auto;
-//   }
-// }
-
 .row {
   @include outer-container;
-  padding-bottom: 2em;
 }
 
 .img-block {
-  padding: 1em;
+  padding: $base-spacing;
 
   img {
     width: 100%;
@@ -33,8 +22,17 @@
 
 .content {
   margin: 0 auto;
-  padding: 96px 15px;
+  padding: $x-large-spacing $small-spacing;
   max-width: $max-width;
+}
+
+.title-block {
+  text-align: left;
+  
+  @include media($mobile-grid) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .content-block {

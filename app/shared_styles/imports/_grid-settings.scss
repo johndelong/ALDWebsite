@@ -5,8 +5,9 @@ $column: 90px;
 $gutter: 24px;
 $grid-columns: 12;
 
-$max-width: em(1024);
-$mobile: em(640);
+$max-width: 1024px;
+$mobile: 640px;
+// $mobile: em(640);
 $tablet: em(1024) + $base-spacing;
 
 

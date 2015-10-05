@@ -2,16 +2,16 @@
 
 #footer {
   background-color: #201a16;
+  padding: $x-large-spacing 0;
   
   .text-block {
     color: white;
     text-align: center;
-    font-size: 14px;
   }
   
   .disclaimer {
     color: rgba(255,255,255,.4);
-    font-size: 13px;
+    font-size: $small-font-size;
     
     a {
       color: rgba(255,255,255,.4);

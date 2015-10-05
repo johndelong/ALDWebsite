@@ -4,6 +4,8 @@ $heading-font-family: $base-font-family;
 
 // Font Sizes
 $base-font-size: 1.2em;
+$small-font-size: $base-font-size * 0.65;
+$x-small-font-size: $small-font-size * 0.85;
 
 // Line height
 $base-line-height: 1.5;
@@ -11,7 +13,9 @@ $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
+$base-spacing: $base-line-height * 0.5em;
+$large-spacing: $base-spacing * 2;
+$x-large-spacing: $large-spacing * 2;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
