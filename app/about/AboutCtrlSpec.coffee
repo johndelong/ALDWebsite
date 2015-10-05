@@ -8,5 +8,5 @@ describe "AboutCtrl:", ->
     beforeEach inject ->
       @controller = @controllerService "AboutCtrl"
 
-    # it "has the value 'About'", ->
-    #   expect(@controller.value).toBe('About')
+    it "has the value 'About'", ->
+      expect(@controller.value).toBe('About')

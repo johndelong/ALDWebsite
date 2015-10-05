@@ -44,14 +44,16 @@
   .preFooter-img {  
     padding: 0 $base-spacing;
     
-    img {      
+    img {   
+      // max-width: 300px;
+         
       border-radius: 50%;
       border-style: solid;
       border-width: 6px;
       border-color: $white;
-      
-      display: block;
-      margin: 0 auto;
+      // 
+      // display: block;
+      // margin: 0 auto;
     }
   }
 }

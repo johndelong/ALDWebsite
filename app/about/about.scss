@@ -1,5 +1,9 @@
 @import 'imports';
 
 #about {
-  margin: $base-spacing;
+  // margin: $base-spacing;
+  
+  .angular-google-map-container { 
+    height: 400px;
+  }
 }

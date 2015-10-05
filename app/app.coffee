@@ -5,6 +5,7 @@ angular.module('aldwebsite', [
   'angular-loading-bar'
 
   # MODULE LIST AUTOGEN BELOW THIS LINE
+  'aldwebsite.about'
   'aldwebsite.contactMe'
   'aldwebsite.about'
   'aldwebsite.homePage'
