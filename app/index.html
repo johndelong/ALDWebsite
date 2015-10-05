@@ -5,8 +5,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300,700" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,100italic,300italic,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="icon" type="image/png" href="/header/favicon.png">
 
     <title>Amanda Lynn DeLong</title>
     <!-- bower:css -->
@@ -25,11 +28,11 @@
     <!-- endinject -->
   </head>
 
-  <body ng-app="ALDWebsite" ng-strict-di>
+  <body ng-app="aldwebsite" ng-strict-di>
     <div class="top-header" ng-include="'/navigation/main-menu.html'"></div>
     <ui-view autoscroll="true"></ui-view>
-    <div ng-include="'/footer/preFooter/preFooter.html'"></div>
     <div ng-include="'/footer/footer.html'"></div>
+    
     <!-- inject:external_scripts:html -->
     <!-- endinject -->
   </body>

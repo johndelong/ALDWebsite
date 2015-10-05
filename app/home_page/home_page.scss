@@ -1,0 +1,12 @@
+@import 'imports';
+
+#homePage {
+  margin: $base-spacing;
+  
+  .column {
+    @include span-columns(6);
+    @include media($mobile-grid) {
+      @include span-columns(4);
+    }
+  }
+}

@@ -4,18 +4,24 @@
   
   background-color: rgb(240, 240, 240);
   
-  .content {
-    padding: 18px 15px;
+  .row {
+    padding-top: 2em;
+  }
+  
+  .image-column {
+    @include span-columns(5);
+    @include media($mobile-grid) {
+      @include span-columns(4);
+    }
+  }
+  
+  .text-column {
+    @include span-columns(7);
+    @include media($mobile-grid) {
+      @include span-columns(4);
+    }
   }
 
-  .img-col {
-    @include col-width(30%);
-  }
-  
-  .des-col {
-    @include col-width(70%);
-  }
-  
   h1 {
     font-size: 42px;
     font-weight: normal;
@@ -36,12 +42,16 @@
   }
 
   .preFooter-img {  
-    img {
-      width: 300px;
+    padding: 0 $base-spacing;
+    
+    img {      
       border-radius: 50%;
       border-style: solid;
       border-width: 6px;
       border-color: $white;
+      
+      display: block;
+      margin: 0 auto;
     }
   }
 }

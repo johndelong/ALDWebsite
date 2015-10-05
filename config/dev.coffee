@@ -1,4 +1,4 @@
-angular.module('ALDWebsite.config', [])
+angular.module('aldwebsite.config', [])
 
-angular.module('ALDWebsite.config').constant "config",
+angular.module('aldwebsite.config').constant "config",
   apiBase: "http://localhost:5000"
