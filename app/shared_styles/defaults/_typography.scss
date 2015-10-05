@@ -25,6 +25,16 @@ h1 {
     font-size: $base-font-size * 2;
     font-weight: 300;
 }
+
+h2 {
+  font-size: $base-font-size * 1.75;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: $base-font-size * 0.75;
+  font-weight: bold;
+}
 // Changes ended
 
 p {
