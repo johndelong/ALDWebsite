@@ -1,19 +1,20 @@
 angular.module('aldwebsite.contactMe')
-.controller 'ContactMeCtrl', ($scope, $http) ->
+.controller 'ContactMeCtrl', ($http) ->
 
   @value = "Contact Me"
-  
-  $scope.master = {}
 
-  $scope.update = (data) ->
-    $scope.master = angular.copy(data);
-    $scope.master.body = '<pre>' + $scope.master.name + '</pre><pre>' + $scope.master.email + '</pre>'
+  @data = {}
 
-  $scope.reset = ->
-    $scope.data = angular.copy($scope.master);
-    
-  $scope.submit = ->
+  @submit = ->
+    console.log('Sending contact message...')
     # $scope.master.body = '<pre>' + $scope.master.name + '</pre><pre>' + $scope.master.email + '</pre>'
-    $http.post('https://3dwtmgjgrg.execute-api.us-east-1.amazonaws.com/prod/contactMe', $scope.master)
+    $http.post('https://3dwtmgjgrg.execute-api.us-east-1.amazonaws.com/prod/contactMe', @data).then ((response) ->
+      console.log('Message was sent!')
+      console.log(response)
+      return
+    ), (response) ->
+      console.error('Error sending message!')
+      console.error(response)
+      return
 
   return this

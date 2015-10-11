@@ -10,47 +10,39 @@
 <div id="contactMe" class="content">
   <div class="center">
     <!-- <h1>"My goal is to help you achieve all of your real estate dreams."</h1> -->
-    <p>Buying or selling a home can seem like a daunting task. But don't worry 
-      - I'm here to help! I would love to meet with you over coffee or tea to 
-      hear about your real estate goals and understand how my professional 
+    <p>Buying or selling a home can seem like a daunting task. But don't worry
+      - I'm here to help! I would love to meet with you over coffee or tea to
+      hear about your real estate goals and understand how my professional
       knowledge can best benefit you.
     </p>
   </div>
   <hr>
 
   <div>
-    <form novalidate class="simple-form">
+    <form name="emailForm" novalidate class="simple-form">
       <legend>Name</legend>
-      <label>  
-        <input type="text" ng-model="data.firstName"/>
+      <label>
+        <input type="text" ng-model="contactMe.data.first_name" ng-required="true"/>
         First Name
       </label>
       <label>
-        <input type="text" ng-model="data.lastName"/>
+        <input type="text" ng-model="contactMe.data.last_name" ng-required="true" />
         Last Name
       </label>
       <label>
         Email Address
-        <input type="email" ng-model="data.email" /><br />
+        <input type="email" ng-model="contactMe.data.email_address" ng-required="true" /><br />
       </label>
       <label>
         Subject
-        <input type="text" ng-model="data.subject" value="male" />
+        <input type="text" ng-model="contactMe.data.subject" ng-required="true" value="male" />
       </label>
       <label>
         Message
-        <textarea></textarea>
+        <textarea ng-model="contactMe.data.body" ng-required="true"></textarea>
       </label>
 
-      <input type="submit" ng-click="submit(data)" value="Send" />
+      <input type="submit" ng-disabled="!emailForm.$valid" ng-click="contactMe.submit(contactMe.data)" value="Send" />
     </form>
-    <!-- <pre>user = {{data | json}}</pre>
-    <pre>master = {{master | json}}</pre> -->
   </div>
 </div>
-
-<!-- <div id="contactMe">
-  <div class="greeting">
-    Welcome to {{ contactMe.value }}
-  </div>
-</div> -->
