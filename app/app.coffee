@@ -19,7 +19,7 @@ angular.module('aldwebsite').config ($urlRouterProvider) ->
   $urlRouterProvider.otherwise('/')
 
 angular.module('aldwebsite').config ($httpProvider) ->
-  $httpProvider.defaults.withCredentials = true
+  $httpProvider.defaults.withCredentials = false
   $httpProvider.defaults.headers.delete = {'Content-Type': 'application/json'}
 
 angular.module('aldwebsite').config (cfpLoadingBarProvider) ->
