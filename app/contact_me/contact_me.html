@@ -18,31 +18,41 @@
   </div>
   <hr>
 
-  <div>
+  <div class="row">
     <form name="emailForm" novalidate class="simple-form">
-      <legend>Name</legend>
-      <label>
-        <input type="text" ng-model="contactMe.data.first_name" ng-required="true"/>
-        First Name
-      </label>
-      <label>
-        <input type="text" ng-model="contactMe.data.last_name" ng-required="true" />
-        Last Name
-      </label>
-      <label>
-        Email Address
-        <input type="email" ng-model="contactMe.data.email_address" ng-required="true" /><br />
-      </label>
-      <label>
-        Subject
-        <input type="text" ng-model="contactMe.data.subject" ng-required="true" value="male" />
-      </label>
-      <label>
-        Message
-        <textarea ng-model="contactMe.data.body" ng-required="true"></textarea>
-      </label>
 
-      <input type="submit" ng-disabled="!emailForm.$valid" ng-click="contactMe.submit(contactMe.data)" value="Send" />
+      <h4>first name</h4>
+      <div class="column half-col">
+        <label>
+          <input type="text" ng-model="contactMe.data.first_name" ng-required="true"/>
+          <h4>First Name</h4>
+        </label>
+      </div>
+
+      <div class="column half-col break">
+        <label>
+          <input type="text" ng-model="contactMe.data.last_name" ng-required="true" />
+          <h4>Last Name</h4>
+        </label>
+      </div>
+
+        <label>
+          Email Address
+          <input type="email" ng-model="contactMe.data.email_address" ng-required="true" />
+        </label>
+
+        <label>
+          <h3>Subject</h3>
+          <input type="text" ng-model="contactMe.data.subject" ng-required="true" value="male" />
+        </label>
+
+        <label>
+          <h3>Message</h3>
+          <textarea ng-model="contactMe.data.body" ng-required="true"></textarea>
+        </label>
+
+      <!-- <input type="submit" ng-disabled="!emailForm.$valid" ng-click="contactMe.submit(contactMe.data)" value="Send" /> -->
     </form>
   </div>
+
 </div>

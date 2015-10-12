@@ -9,6 +9,32 @@
 
 .row {
   @include outer-container;
+
+  .column {
+    &.full-col {
+      @include span-columns(12);
+    }
+
+    &.half-col {
+      @include span-columns(6);
+    }
+
+    &.three-quarters-col {
+      @include span-columns(9);
+    }
+
+    &.one-quarter-col {
+      @include span-columns(3);
+    }
+
+    &.break {
+      @include omega();
+    }
+
+    @include media($mobile-grid) {
+      @include span-columns(4);
+    }
+  }
 }
 
 .img-block {
@@ -28,7 +54,7 @@
 
 .title-block {
   text-align: left;
-  
+
   @include media($mobile-grid) {
     width: 100%;
     text-align: center;
@@ -62,7 +88,7 @@
     height: 100%;
     width: 100%;
   }
-  
+
   .color-overlay {
     position: absolute;
     top: 0;
