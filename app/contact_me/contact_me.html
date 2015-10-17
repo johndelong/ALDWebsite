@@ -21,34 +21,34 @@
   <div class="row">
     <form name="emailForm" novalidate class="simple-form">
 
-      <h4>first name</h4>
+      <h3>Name</h3>
       <div class="column half-col">
         <label>
-          <input type="text" ng-model="contactMe.data.first_name" ng-required="true"/>
-          <h4>First Name</h4>
+          <input type="text" ng-model="contactMe.data.first_name" ng-required="true" class="field"/>
+          First Name
         </label>
       </div>
 
       <div class="column half-col break">
         <label>
-          <input type="text" ng-model="contactMe.data.last_name" ng-required="true" />
-          <h4>Last Name</h4>
+          <input type="text" ng-model="contactMe.data.last_name" ng-required="true" class="field" />
+          Last Name
         </label>
       </div>
 
         <label>
-          Email Address
-          <input type="email" ng-model="contactMe.data.email_address" ng-required="true" />
+          <h3>Email Address</h3>
+          <input type="email" ng-model="contactMe.data.email_address" ng-required="true" class="field" />
         </label>
 
         <label>
           <h3>Subject</h3>
-          <input type="text" ng-model="contactMe.data.subject" ng-required="true" value="male" />
+          <input type="text" ng-model="contactMe.data.subject" ng-required="true" value="male" class="field" />
         </label>
 
         <label>
           <h3>Message</h3>
-          <textarea ng-model="contactMe.data.body" ng-required="true"></textarea>
+          <textarea ng-model="contactMe.data.body" ng-required="true" class="field"></textarea>
         </label>
 
       <!-- <input type="submit" ng-disabled="!emailForm.$valid" ng-click="contactMe.submit(contactMe.data)" value="Send" /> -->

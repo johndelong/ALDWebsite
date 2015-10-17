@@ -2,4 +2,16 @@
 
 #contactMe {
   // margin: $base-spacing;
+
+  .field {
+    padding: 12px;
+  }
+
+  textarea {
+    height: 140px;
+  }
+
+  label {
+    margin-bottom: 24px;
+  }
 }

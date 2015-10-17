@@ -15,7 +15,7 @@ select {
 
 label {
   margin-bottom: $small-spacing / 2;
-  font-weight: 600;
+  font-weight: normal;
 
   &.required::after {
     content: '*';
