@@ -1,4 +1,4 @@
-describe "AboutCtrl:", ->
+describe "AboutCtrl", ->
   beforeEach(module("aldwebsite.about"))
 
   beforeEach inject ($controller) ->
@@ -6,7 +6,8 @@ describe "AboutCtrl:", ->
 
   describe "about.value", ->
     beforeEach inject ->
-      @controller = @controllerService "AboutCtrl"
+      $scope = {}
+      @controller = @controllerService('AboutCtrl', $scope: $scope)
 
     it "has the value 'About'", ->
       expect(@controller.value).toBe('About')
