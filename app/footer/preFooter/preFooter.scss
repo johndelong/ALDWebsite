@@ -1,32 +1,10 @@
 @import 'imports';
 
-@mixin center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  @include transform(translate(-50%, -50%));
-}
-
 #preFooter {
-  $pre-footer-height: em(325);
   background-color: rgb(240, 240, 240);
-  
+
   .row {
     padding: $base-spacing 0;
-  }
-  
-  .image-column {
-    @include span-columns(4);
-    @include media($mobile-grid) {
-      @include span-columns(4);
-    }
-  }
-  
-  .text-column {
-    @include span-columns(8);
-    @include media($mobile-grid) {
-      @include span-columns(4);
-    }
   }
 
   h1 {
@@ -37,32 +15,31 @@
 
   ul {
     padding: 17px;
-    
+
     li {
       display: inline-block;
       padding-right: 17px;
-      
+
       a {
         color: black;
       }
     }
   }
 
-  .preFooter-img {  
-    padding: 0 $base-spacing;
-    position: relative;
-    
+  .preFooter-img {
+
+    height: 100%;
+    padding: $base-spacing;
     width: 100%;
-    height: $pre-footer-height;
-    
-    img {   
-      @include center; 
-      
-      max-height: 350px;
+
+    img {
+      border-color: $white;
       border-radius: 50%;
       border-style: solid;
       border-width: 6px;
-      border-color: $white;
+      display: block;
+      margin: auto;
+      max-height: 350px;
     }
   }
 }
