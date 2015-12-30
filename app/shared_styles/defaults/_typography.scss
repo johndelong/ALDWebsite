@@ -22,8 +22,9 @@ h6 {
 
 // Added Changes here
 h1 {
-    font-size: $base-font-size * 1.8;
+    font-size: $base-font-size * 2.2;
     font-weight: 300;
+
 }
 
 h2 {
@@ -31,17 +32,16 @@ h2 {
   font-weight: 300;
 }
 
-h3,
-h4 {
-  font-size: $base-font-size * 0.75;
+h3 {
+  font-size: $base-font-size;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 h4 {
+  font-size: $base-font-size * .7;
   font-weight: normal;
-  font-size: $x-small-font-size;
+  letter-spacing: 2px;
 }
 // Changes ended
 
@@ -67,7 +67,7 @@ a {
 }
 
 hr {
-  margin: $large-spacing 0;
+  margin: $large-spacing * 2 0;
   border-top: none;
   border-right: none;
   border-bottom: $base-border;
