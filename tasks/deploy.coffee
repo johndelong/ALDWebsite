@@ -3,7 +3,6 @@ argv = require('yargs').argv
 awspublish = require('gulp-awspublish')
 awspublishRouter = require('gulp-awspublish-router')
 parallelize = require('concurrent-transform')
-_ = require('lodash')
 
 
 gulp.task 'deploy', ['build/dist'], ->

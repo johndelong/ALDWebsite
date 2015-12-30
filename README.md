@@ -17,11 +17,17 @@ A seed project for Angular
         npm install -g gulp bower
 
 5. Install the rest of the prerequisites using their various dependency management systems:
+
+  We have two kinds of dependencies in this project: tools and angular framework code.  The tools help
+  us manage and test the application.
+
+  * We get the tools we depend upon via `npm`, the [node package manager][npm].
+  * We get the angular code via `bower`, a [client-side code package manager][bower].
+
   *Note: you might need to be root to run `bundle install` on your system*
 
         npm install
         bower install
-        bundle install
 
 6. Create a new app:
 

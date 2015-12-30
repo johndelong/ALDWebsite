@@ -2,7 +2,7 @@ gulp = require('gulp')
 concat = require('gulp-concat')
 del = require('del')
 revall = require('gulp-rev-all')
-minifyCSS = require('gulp-minify-css')
+minifyCSS = require('gulp-cssnano')
 uglify = require('gulp-uglify')
 
 
