@@ -1,17 +1,30 @@
 @import 'imports';
 
 #contactMe {
-  // margin: $base-spacing;
 
   .field {
     padding: 12px;
   }
 
+  input {
+    background-color: rgb(250, 250, 250);
+  }
+
+  input:focus {
+    background-color: $white;
+}
+
   textarea {
+    background-color: rgb(250, 250, 250);
     height: 140px;
+  }
+
+  textarea:focus{
+    background-color: $white;
   }
 
   label {
     margin-bottom: 24px;
+    font-size: $small-font-size;
   }
 }
