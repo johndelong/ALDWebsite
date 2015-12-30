@@ -67,7 +67,10 @@ a {
 }
 
 hr {
-  margin: $large-spacing * 2 0;
+  margin: ($large-spacing * 2) 0;
+  @media screen and (max-width: $mobile) {
+    margin: ($large-spacing) 0;
+  }
   border-top: none;
   border-right: none;
   border-bottom: $base-border;

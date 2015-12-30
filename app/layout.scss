@@ -20,6 +20,14 @@
       &.one-quarter-col {
         @include span-columns(3);
       }
+
+      &.two-thirds-col {
+        @include span-columns(8);
+      }
+
+      &.one-third-col {
+        @include span-columns(4);
+      }
     }
 
     &.break {
@@ -38,8 +46,11 @@
 }
 
 .content {
-  margin: 0 auto;
-  padding: $base-spacing * 6 0;
+  margin: auto;
+  padding: $x-large-spacing;
+  @include media($mobile-grid) {
+    padding: $large-spacing;
+  }
   max-width: $max-width;
 }
 
