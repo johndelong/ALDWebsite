@@ -6,7 +6,8 @@ describe "ContactMeCtrl:", ->
 
   describe "contactMe.value", ->
     beforeEach inject ->
-      @controller = @controllerService "ContactMeCtrl"
+      $scope = {}
+      @controller = @controllerService("ContactMeCtrl", $scope: $scope)
 
     it "has the value 'world'", ->
       expect(@controller.value).toBe('Contact Me')

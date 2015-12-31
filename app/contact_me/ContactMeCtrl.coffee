@@ -1,32 +1,34 @@
 angular.module('aldwebsite.contactMe')
-.controller 'ContactMeCtrl', ($http) ->
+.controller 'ContactMeCtrl', ($http, $scope) ->
 
   @value = "Contact Me"
-  @data = {}
+  $scope.showForm = true
+  $scope.data = {}
 
   @submit = ->
+    $scope.submitStatus = "Sending..."
     Parse.Cloud.run('contactMe',
       firstName: @data.first_name
       lastName: @data.last_name
       email: @data.email
       subject: @data.subject
       message: @data.message
-    ).then (response) ->
+    ).then ((response) ->
+      # success
+      $scope.showForm = false
+      $scope.submitStatus = "Thank you for your email! " +
+      "I'll be in contact with you shortly."
+
       console.log response
-      return
+      $scope.$digest()
+    ), (httpResponse) ->
+      # error
+      $scope.showForm = true
+      $scope.submitStatus = "There was a problem sending the email. If you " +
+      "continue to receive this message, feel free to email directly at " +
+      "amandalynndelong@grar.com."
 
-
-    # console.log('Sending contact message...')
-    # $http.post(
-    #   'https://3dwtmgjgrg.execute-api.us-east-1.amazonaws.com/prod/contactMe',
-    #   @data
-    #   ).then ((response) ->
-    #     console.log('Message was sent!')
-    #     console.log(response)
-    #     return
-    # ), (response) ->
-    #   console.error('Error sending message!')
-    #   console.error(response)
-    #   return
+      console.error 'Request failed with response code ' + httpResponse.status
+      $scope.$digest()
 
   return this

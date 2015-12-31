@@ -19,34 +19,37 @@
   <hr>
 
   <div class="row">
-    <form name="emailForm" novalidate class="simple-form">
+    <form name="emailForm" novalidate class="simple-form" ng-show="showForm">
 
       <p>Name*</p>
       <div class="column half-col">
         <label>
-          <input type="text" ng-model="contactMe.data.first_name" ng-required="true" class="field"/>
+          <input type="text" ng-model="data.first_name" ng-required="true" class="field"/>
           First Name
         </label>
       </div>
 
       <div class="column half-col break">
         <label>
-          <input type="text" ng-model="contactMe.data.last_name" ng-required="true" class="field" />
+          <input type="text" ng-model="data.last_name" ng-required="true" class="field" />
           Last Name
         </label>
       </div>
 
         <p>Email Address*</p>
-        <input type="email" ng-model="contactMe.data.email" ng-required="true" class="field" />
+        <input type="email" ng-model="data.email" ng-required="true" class="field" />
 
         <p>Subject*</p>
-        <input type="text" ng-model="contactMe.data.subject" ng-required="true" value="male" class="field" />
+        <input type="text" ng-model="data.subject" ng-required="true" value="male" class="field" />
 
         <p>Message*</p>
-        <textarea ng-model="contactMe.data.message" ng-required="true" class="field"></textarea>
+        <textarea ng-model="data.message" ng-required="true" class="field"></textarea>
 
       <input type="submit" ng-disabled="!emailForm.$valid" ng-click="contactMe.submit()" value="Send" />
     </form>
+    <div class="center-text">
+      <p>{{submitStatus}}</p>
+    </div>
   </div>
 
 </div>
