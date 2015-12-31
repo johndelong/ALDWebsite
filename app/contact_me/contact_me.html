@@ -23,30 +23,30 @@
 
       <p>Name*</p>
       <div class="column half-col">
-        <label>
           <input type="text" ng-model="data.first_name" ng-required="true" class="field"/>
-          First Name
-        </label>
+          <p class="subscript">First Name</p>
       </div>
 
       <div class="column half-col break">
-        <label>
           <input type="text" ng-model="data.last_name" ng-required="true" class="field" />
-          Last Name
-        </label>
+          <p class="subscript">Last Name</p>
       </div>
 
         <p>Email Address*</p>
         <input type="email" ng-model="data.email" ng-required="true" class="field" />
 
         <p>Subject*</p>
-        <input type="text" ng-model="data.subject" ng-required="true" value="male" class="field" />
+        <input type="text" ng-model="data.subject" ng-required="true" class="field" />
 
         <p>Message*</p>
         <textarea ng-model="data.message" ng-required="true" class="field"></textarea>
 
-      <input type="submit" ng-disabled="!emailForm.$valid" ng-click="contactMe.submit()" value="Send" />
+        <button ng-disabled="!emailForm.$valid" ng-click="contactMe.submit()" class="btn waves-effect waves-light" type="submit">
+          Send
+          <i class="material-icons right">send</i>
+        </button>
     </form>
+
     <div class="center-text">
       <p>{{submitStatus}}</p>
     </div>

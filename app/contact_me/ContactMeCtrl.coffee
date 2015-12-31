@@ -8,11 +8,11 @@ angular.module('aldwebsite.contactMe')
   @submit = ->
     $scope.submitStatus = "Sending..."
     Parse.Cloud.run('contactMe',
-      firstName: @data.first_name
-      lastName: @data.last_name
-      email: @data.email
-      subject: @data.subject
-      message: @data.message
+      firstName: $scope.data.first_name
+      lastName: $scope.data.last_name
+      email: $scope.data.email
+      subject: $scope.data.subject
+      message: $scope.data.message
     ).then ((response) ->
       # success
       $scope.showForm = false

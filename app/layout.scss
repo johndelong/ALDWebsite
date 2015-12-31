@@ -2,6 +2,7 @@
 
 .row {
   @include outer-container;
+  margin: 0;
 
   .column {
     @media screen and (min-width: $mobile) {
