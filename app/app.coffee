@@ -1,5 +1,8 @@
 # Declare the main module and dependencies
-angular.module('aldwebsite', [
+appModule = angular.module('aldwebsite', [
+  # Internal Files
+  'aldwebsite.config'
+
   # External modules
   'ui.router'
   'angular-loading-bar'
@@ -11,26 +14,27 @@ angular.module('aldwebsite', [
   'aldwebsite.homePage'
 ])
 
-
-angular.module('aldwebsite').config ($locationProvider) ->
+appModule.config ($locationProvider) ->
   $locationProvider.html5Mode(enabled: true, requireBase: false)
 
-angular.module('aldwebsite').config ($urlRouterProvider) ->
+appModule.config ($urlRouterProvider) ->
   $urlRouterProvider.otherwise('/')
 
-angular.module('aldwebsite').config ($httpProvider) ->
+appModule.config ($httpProvider) ->
   $httpProvider.defaults.withCredentials = false
   $httpProvider.defaults.headers.delete = {'Content-Type': 'application/json'}
 
-angular.module('aldwebsite').config (cfpLoadingBarProvider) ->
+appModule.config (cfpLoadingBarProvider) ->
   cfpLoadingBarProvider.includeSpinner = false
   cfpLoadingBarProvider.latencyThreshold = 250
 
 # We have to have $state here, to avoid this bug:
 # https://github.com/angular-ui/ui-router/issues/679#issuecomment-31116942
-angular.module('aldwebsite').run ($state, $rootScope) ->
-
+appModule.run ($state, $rootScope, config) ->
   # UI Router silently swallows errors on resolve. This exposes them.
   $rootScope.$on '$stateChangeError',
   (event, toState, toParams, fromState, fromParams, error) ->
     throw error
+
+  # Initalize Parse
+  Parse.initialize config.parseAppKey, config.parseJSKey

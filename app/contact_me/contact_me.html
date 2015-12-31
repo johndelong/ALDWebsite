@@ -37,15 +37,15 @@
       </div>
 
         <p>Email Address*</p>
-        <input type="email" ng-model="contactMe.data.email_address" ng-required="true" class="field" />
+        <input type="email" ng-model="contactMe.data.email" ng-required="true" class="field" />
 
         <p>Subject*</p>
         <input type="text" ng-model="contactMe.data.subject" ng-required="true" value="male" class="field" />
 
         <p>Message*</p>
-        <textarea ng-model="contactMe.data.body" ng-required="true" class="field"></textarea>
+        <textarea ng-model="contactMe.data.message" ng-required="true" class="field"></textarea>
 
-      <!-- <input type="submit" ng-disabled="!emailForm.$valid" ng-click="contactMe.submit(contactMe.data)" value="Send" /> -->
+      <input type="submit" ng-disabled="!emailForm.$valid" ng-click="contactMe.submit()" value="Send" />
     </form>
   </div>
 
