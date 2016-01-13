@@ -1,7 +1,30 @@
-<div class="header-wrapper">
+<!-- <h1 ng-class="{small: scroll > 0, big: scroll <= 50}">Test</h1> -->
+<div class="header-wrapper" ng-class="{'floating-menu': scroll > 0}" scroll-position="scroll">
   <ul class="menu-items">
     <li><a ui-sref="homePage">HOME</a></li>
     <li><a ui-sref="about">ABOUT</a></li>
     <li><a class="call-to-action" ui-sref="contactMe">CONTACT</a></li>
   </ul>
+
+  <button type="button" class="js-menu-trigger sliding-panel-button">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <nav class="js-menu sliding-panel-content">
+    <ul>
+      <li><a href="javascript:void(0)">Item 1</a></li>
+      <li><a href="javascript:void(0)">Item 2</a></li>
+      <li><a href="javascript:void(0)">Item 3</a></li>
+    </ul>
+  </nav>
+
+  <div class="js-menu-screen sliding-panel-fade-screen"></div>
+
+
+
 </div>
+
+<!-- <div ng-app="myApp" ng-controller='MainController'> -->
+  <!-- <span class='scroll-debug' scroll-position="scroll">{{scroll}}</span> -->
+
+<!-- </div> -->

@@ -1,35 +1,37 @@
 @import 'imports';
 
 $header-height: 85px;
+$header-height-small: 60px;
 $break-small: 640px;
 
 .top-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
 }
 
-.scroll-header {
-  transition: all 0.2s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 100;
-  background-color: rgba(32, 26, 22, 0.901961);
-  width: 100%;
-
-  &.show {
-    visibility: visible;
-    opacity: 1;
-    height: $header-height;
-  }
+.sliding-panel-button {
+  margin: 20px;
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+  outline: none;
 }
 
 .header-wrapper {
   padding-right: 20px;
   padding-left: 20px;
   height: $header-height;
+  @include transition(all 0.25s linear);
+
+
+  &.floating-menu {
+    background-color: $site-black;
+    opacity: 0.85;
+  }
 
   .menu-items {
     float: right;
@@ -70,9 +72,22 @@ $break-small: 640px;
     }
   }
 
+  @media screen and (min-width: $break-small) {
+    .sliding-panel-button {
+      display: none;
+    }
+  }
+
   @media screen and (max-width: $break-small) {
+    height: $header-height-small;
     a {
       display: none;
     }
   }
 }
+
+// .scroll-debug {
+//   position: fixed;
+//   bottom: 10px;
+//   right: 10px;
+// }

@@ -5,7 +5,7 @@ button {
   display: inline-block;
   border: none;
   border-radius: $base-border-radius;
-  background-color: $action-color;
+  background-color: $site-black;
   cursor: pointer;
   padding: 0.75em 1em;
   vertical-align: middle;
@@ -21,12 +21,15 @@ button {
 
   &:hover,
   &:focus {
-    background-color: darken($action-color, 15%);
+    background-color: tint($site-black, 30%);
     color: #fff;
   }
 
   &:disabled {
     opacity: 0.5;
-    cursor: not-allowed;
+    cursor: default;
+    background-color: $site-black;
   }
+
+  @include transition(all 0.25s ease-in-out);
 }
