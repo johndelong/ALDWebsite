@@ -8,12 +8,12 @@ angular.module('aldwebsite.contactMe')
   @sendForm = ->
     $http(
       method: 'POST'
-      url: '//formspree.io/johnnydelong@gmail.com'
+      url: '//formspree.io/amanda@patriot-reality.net'
       data:
         firstName: $scope.data.first_name
         lastName: $scope.data.last_name
         email: $scope.data.email
-        subject: $scope.data.subject
+        _subject: $scope.data.subject
         message: $scope.data.message
       dataType: 'json'
     ).then ((response) ->
@@ -32,7 +32,7 @@ angular.module('aldwebsite.contactMe')
       $scope.showForm = true
       $scope.submitStatus = "There was a problem sending the email. If you " +
       "continue to receive this message, feel free to email directly at " +
-      "amandalynndelong@grar.com."
+      "amanda@patriot-reality.net."
 
       console.error 'Request failed with response code ' + httpResponse.status
       $scope.$digest()

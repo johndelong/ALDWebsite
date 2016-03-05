@@ -4,19 +4,40 @@ $header-height: 85px;
 $header-height-small: 60px;
 $break-small: 640px;
 
-
-
 header {
 
   .header-banner {
     @include position(fixed, 0px 0px null 0px);
     @include transition(all 0.25s linear);
-    z-index: 90;
+
+    padding-right: 20px;
+    padding-left: 20px;
+    height: $header-height;
+    line-height: $header-height;
+    z-index: 100;
+
+    @media screen and (max-width: $mobile) {
+      height: $header-height-small;
+    }
+
+    &.show-background {
+      background-color: $site-black;
+      opacity: 0.85;
+    }
   }
 
-  .show-background {
-    background-color: $site-black;
-    opacity: 0.85;
+  .sliding-panel-button {
+    float: left;
+    margin-top: 5px;
+    background-color: Transparent;
+
+    &:hover {
+      background-color: Transparent;
+    }
+
+    @media screen and (min-width: $mobile) {
+      display: none;
+    }
   }
 
   .sliding-panel-content {
@@ -38,7 +59,6 @@ header {
     z-index: 999999;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    
 
     ul {
       padding: 0;
@@ -70,8 +90,6 @@ header {
     &.is-visible {
       @include transform(translateX(0));
     }
-
-
   }
 
   .sliding-panel-fade-screen {
@@ -88,17 +106,10 @@ header {
     }
   }
 
-
-
   .menu-items {
-    padding-right: 20px;
-    padding-left: 20px;
-    height: $header-height;
-    z-index: 100;
-
-    @include transition(all 0.25s linear);
-
-
+    @media screen and (max-width: $mobile) {
+      display: none;
+    }
 
     ul {
       float: right;
@@ -108,8 +119,6 @@ header {
     li {
       display: block;
       float: left;
-      height: $header-height;
-      line-height: $header-height;
     }
 
     a {
@@ -138,27 +147,5 @@ header {
         }
       }
     }
-
-    // @media screen and (min-width: $break-small) {
-    //   .sliding-panel-button {
-    //     display: none;
-    //   }
-    // }
-    //
-    // @media screen and (max-width: $break-small) {
-    //   height: $header-height-small;
-    //   a {
-    //     display: none;
-    //   }
-    // }
   }
-
-
-
-
-
-
-  // nav {
-  //
-  // }
 }

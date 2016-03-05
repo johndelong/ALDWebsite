@@ -1,19 +1,20 @@
+<div ng-controller="NavigationCtrl as navCtrl">
+  <div class="header-banner {{navCtrl.getHeaderBackground()}}">
+    <button type="button" class="sliding-panel-button">
+      <i class="fa fa-bars"></i>
+    </button>
 
-<div ng-controller="NavigationCtrl as navCtrl" class="header-banner">
-  <div class="{{navCtrl.getHeaderBackground()}}">
-    <nav class="{{navCtrl.getClass()}} horizontal-header" >
-
-      <ul>
-        <li><a ui-sref="homePage">HOME</a></li>
-        <li><a ui-sref="about">ABOUT</a></li>
-        <li><a class="call-to-action" ui-sref="contactMe">CONTACT</a></li>
-      </ul>
+    <nav class=" menu-items">
+      <div ng-include="'/navigation/menu-items.html'"></div>
     </nav>
   </div>
-
-  <button ng-show="showMenuIcon" type="button" class="sliding-panel-button">
-    <i class="fa fa-bars"></i>
-  </button>
 </div>
 
-<div class="sliding-panel-fade-screen"></div>
+
+<div>
+  <nav class="sliding-panel-content">
+    <div ng-include="'/navigation/menu-items.html'"></div>
+  </nav>
+
+  <div class="sliding-panel-fade-screen"></div>
+</div>
