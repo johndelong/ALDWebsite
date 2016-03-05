@@ -5,24 +5,30 @@ angular.module('aldwebsite.contactMe')
   $scope.showForm = true
   $scope.data = {}
 
-  @submit = ->
-    $scope.submitStatus = "Sending..."
-    Parse.Cloud.run('contactMe',
-      firstName: $scope.data.first_name
-      lastName: $scope.data.last_name
-      email: $scope.data.email
-      subject: $scope.data.subject
-      message: $scope.data.message
+  @sendForm = ->
+    $http(
+      method: 'POST'
+      url: '//formspree.io/johnnydelong@gmail.com'
+      data:
+        firstName: $scope.data.first_name
+        lastName: $scope.data.last_name
+        email: $scope.data.email
+        subject: $scope.data.subject
+        message: $scope.data.message
+      dataType: 'json'
     ).then ((response) ->
-      # success
+      # this callback will be called asynchronously
+      # when the response is available
       $scope.showForm = false
       $scope.submitStatus = "Thank you for your email! " +
       "I'll be in contact with you shortly."
 
       console.log response
       $scope.$digest()
-    ), (httpResponse) ->
-      # error
+
+    ), (response) ->
+      # called asynchronously if an error occurs
+      # or server returns response with an error status.
       $scope.showForm = true
       $scope.submitStatus = "There was a problem sending the email. If you " +
       "continue to receive this message, feel free to email directly at " +
