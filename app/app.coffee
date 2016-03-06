@@ -35,6 +35,3 @@ appModule.run ($state, $rootScope, config) ->
   $rootScope.$on '$stateChangeError',
   (event, toState, toParams, fromState, fromParams, error) ->
     throw error
-
-  # Initalize Parse
-  Parse.initialize config.parseAppKey, config.parseJSKey

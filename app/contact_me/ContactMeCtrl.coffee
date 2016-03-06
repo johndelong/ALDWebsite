@@ -10,10 +10,10 @@ angular.module('aldwebsite.contactMe')
       method: 'POST'
       url: '//formspree.io/amanda@patriot-realty.net'
       data:
-        firstName: $scope.data.first_name
-        lastName: $scope.data.last_name
+        name: $scope.data.first_name + ' ' + $scope.data.last_name
+        phone: $scope.data.phone
         email: $scope.data.email
-        _subject: $scope.data.subject
+        _subject: 'Real Estate Inquiry'
         message: $scope.data.message
       dataType: 'json'
     ).then ((response) ->

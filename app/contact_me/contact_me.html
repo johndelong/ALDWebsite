@@ -19,7 +19,7 @@
   <hr>
 
   <div class="row">
-    <form name="emailForm" 
+    <form name="emailForm"
       novalidate class="simple-form" ng-show="showForm" method="POST">
 
       <p>Name*</p>
@@ -33,11 +33,11 @@
           <p class="subscript">Last Name</p>
       </div>
 
+        <p>Phone Number*</p>
+        <input type="text" ng-model="data.phone" ng-required="true" class="field" />
+
         <p>Email Address*</p>
         <input type="email" ng-model="data.email" ng-required="true" class="field" />
-
-        <p>Subject*</p>
-        <input type="text" ng-model="data.subject" ng-required="true" class="field" />
 
         <p>Message*</p>
         <textarea ng-model="data.message" ng-required="true" class="field"></textarea>
