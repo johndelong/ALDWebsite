@@ -1,35 +1,36 @@
 # Declare the main module and dependencies
-module = angular.module('ALDWebsite', [
+appModule = angular.module('aldwebsite', [
+  # Internal Files
+  'aldwebsite.config'
+
   # External modules
   'ui.router'
   'angular-loading-bar'
 
-  # Our modules
-  'ALDWebsite.homepage'
-  'ALDWebsite.contact'
-  'ALDWebsite.about'
+  # MODULE LIST AUTOGEN BELOW THIS LINE
+  'aldwebsite.about'
+  'aldwebsite.contactMe'
+  'aldwebsite.about'
+  'aldwebsite.homePage'
 ])
 
-
-module.config ($locationProvider) ->
+appModule.config ($locationProvider) ->
   $locationProvider.html5Mode(enabled: true, requireBase: false)
 
-# For any unmatched url, route here
-module.config ($urlRouterProvider) ->
+appModule.config ($urlRouterProvider) ->
   $urlRouterProvider.otherwise('/')
 
-module.config ($httpProvider) ->
+appModule.config ($httpProvider) ->
   $httpProvider.defaults.withCredentials = false
   $httpProvider.defaults.headers.delete = {'Content-Type': 'application/json'}
 
-module.config (cfpLoadingBarProvider) ->
+appModule.config (cfpLoadingBarProvider) ->
   cfpLoadingBarProvider.includeSpinner = false
   cfpLoadingBarProvider.latencyThreshold = 250
 
 # We have to have $state here, to avoid this bug:
 # https://github.com/angular-ui/ui-router/issues/679#issuecomment-31116942
-module.run ($state, $rootScope) ->
-
+appModule.run ($state, $rootScope, config) ->
   # UI Router silently swallows errors on resolve. This exposes them.
   $rootScope.$on '$stateChangeError',
   (event, toState, toParams, fromState, fromParams, error) ->

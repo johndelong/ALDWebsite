@@ -1,0 +1,57 @@
+<div class="full-screen-banner">
+    <img class="banner-img" style="background-image: url('https://lh3.googleusercontent.com/UhCXwk81ZWJwgOWRU3VPo52rONtZ4gO6_0T66fsI-MsDMZV88b_keqTiAFO1a6HD3iSo10ivsRRHLPHJQLNcUNA-NGq5GckcobBRUEl7UaSpqr8aE84QkwoUmGfP7cDNVVsMen1sW2z5J4zvkSLhNiu1LzjF9wc3n2tpADAiKyNY2DoCDXv7FZsfuzexYYhHqix4VLUEQOGB7W4iG1whEILsfAae3P4Psit3gqmPgyGriNrcVr_tEmclkwLGRo2NsNTYgzezvLZ3Q6fCRpjdpfJPyw1mlYem-om_tE0ckReVVbhJZZ01-O8-tjjgofYg1VDHKNWTNJ7_A-pukC_-F6BOnasScEj3tCxsAsUsD8uDBVhw0h2Rqmu4m8DuDALddFxrxAjzzTIZnmA_UYSazbSLorvJnywldUDTjdR6hzV_EtyrMNoQodN3giw3pfcSR8qP4jippEDjPA_FKuiSzKRLM4Ld1gtmW3rEAgKQRDbddJOhb0KG8L2gIbeueX_UCXFpjS4Ib7pRRQ_EESo_12ooGwRj60P_qcuXaKMG-90=w2500-h1592-no');"/>
+    <div class="color-overlay"></div>
+    <div class="title-desc-wrapper">
+      <div class="title">Contact Me</div>
+      <div class="desc">LET'S GET IN TOUCH</div>
+    </div>
+</div>
+
+<div id="contactMe" class="content">
+  <div class="center">
+    <!-- <h1>"My goal is to help you achieve all of your real estate dreams."</h1> -->
+    <p>Buying or selling a home can seem like a daunting task. But don't worry
+      - I'm here to help! I would love to meet with you over coffee or tea to
+      hear about your real estate goals and understand how my professional
+      knowledge can best benefit you.
+    </p>
+  </div>
+  <hr>
+
+  <div class="row">
+    <form name="emailForm"
+      novalidate class="simple-form" ng-show="showForm" method="POST">
+
+      <p>Name*</p>
+      <div class="column half-col">
+          <input type="text" ng-model="data.first_name" ng-required="true" class="field"/>
+          <p class="subscript">First Name</p>
+      </div>
+
+      <div class="column half-col break">
+          <input type="text" ng-model="data.last_name" ng-required="true" class="field" />
+          <p class="subscript">Last Name</p>
+      </div>
+
+        <p>Phone Number*</p>
+        <input type="text" ng-model="data.phone" ng-required="true" class="field" />
+
+        <p>Email Address*</p>
+        <input type="email" ng-model="data.email" ng-required="true" class="field" />
+
+        <p>Message*</p>
+        <textarea ng-model="data.message" ng-required="true" class="field"></textarea>
+
+        <input type="hidden" name="_next" value="//site.io/thanks.html" />
+
+        <button ng-disabled="!emailForm.$valid" ng-click="contactMe.sendForm()" class="btn waves-effect waves-light" type="submit">
+          Send <i class="fa fa-paper-plane"></i>
+        </button>
+    </form>
+
+    <div class="center-text">
+      <p>{{submitStatus}}</p>
+    </div>
+  </div>
+
+</div>

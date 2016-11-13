@@ -1,22 +1,32 @@
 @import 'imports';
 
 #footer {
-  
   background-color: #201a16;
-  
+  padding: $x-large-spacing 0;
+
   .text-block {
     color: white;
     text-align: center;
-    font-size: 14px;
+
+    a {
+      color: white;
+    }
   }
-  
+
+  h4 {
+    margin-bottom: 12px;
+  }
+
   .disclaimer {
     color: rgba(255,255,255,.4);
-    font-size: 13px;
-    
+    font-size: $small-font-size;
+    letter-spacing: 1px;
+
     a {
       color: rgba(255,255,255,.4);
-      text-decoration: underline;
+      border-bottom: solid;
+      border-width: 1px;
+      padding-bottom: 2px;
     }
   }
 }

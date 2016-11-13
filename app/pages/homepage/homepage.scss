@@ -1,7 +1,0 @@
-@import 'imports';
-
-#homepage {
-  .col {
-    @include col-width(50%);
-  }
-}

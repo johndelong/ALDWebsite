@@ -3,25 +3,33 @@ $base-font-family: 'Josefin Sans', sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: 1em; // 16px
+$base-font-size: 1.1em;
+$x-large-font-size: $base-font-size * 1.5;
+$large-font-size: $base-font-size * 1.25;
+$small-font-size: $base-font-size * 0.75;
+$x-small-font-size: $base-font-size * 0.5;
 
 // Line height
-$base-line-height: 1.25;
+$base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
+$base-spacing: $base-line-height * 0.5em;
+$large-spacing: $base-spacing * 2;
+$x-large-spacing: $large-spacing * 2;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$white: #ffffff;
-$black: #000000;
 $blue: #477dca;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$white: #fff;
+$black: #000;
+$site-black: #201a16;
+
 
 // Font Colors
 $base-background-color: #fff;

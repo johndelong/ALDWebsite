@@ -1,7 +1,20 @@
-<div class="header-wrapper">
-  <ul class="menu-items">
-    <li><a ui-sref="home">HOME</a></li>
-    <li><a ui-sref="about">ABOUT</a></li>
-    <li><a class="call-to-action" ui-sref="contact">CONTACT</a></li>
-  </ul>
+<div ng-controller="NavigationCtrl as navCtrl">
+  <div class="header-banner {{navCtrl.getHeaderBackground()}}">
+    <button type="button" class="sliding-panel-button">
+      <i class="fa fa-bars"></i>
+    </button>
+
+    <nav class=" menu-items">
+      <div ng-include="'/navigation/menu-items.html'"></div>
+    </nav>
+  </div>
+</div>
+
+
+<div>
+  <nav class="sliding-panel-content">
+    <div ng-include="'/navigation/menu-items.html'"></div>
+  </nav>
+
+  <div class="sliding-panel-fade-screen"></div>
 </div>

@@ -1,0 +1,31 @@
+@import 'imports';
+
+#contactMe {
+
+  .field {
+    padding: 12px;
+  }
+
+  p {
+    &.subscript {
+      font-size: $base-font-size * 0.75;
+    }
+  }
+
+  input {
+    background-color: rgb(250, 250, 250);
+  }
+
+  input:focus {
+    background-color: $white;
+}
+
+  textarea {
+    background-color: rgb(250, 250, 250);
+    height: 140px;
+  }
+
+  textarea:focus{
+    background-color: $white;
+  }
+}
