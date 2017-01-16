@@ -1,5 +1,6 @@
 angular.module 'aldwebsite.homePage', [
   'ui.router'
+  'slick'
 ]
 
 angular.module('aldwebsite.homePage').config ($stateProvider) ->

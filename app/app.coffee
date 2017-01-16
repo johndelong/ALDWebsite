@@ -6,6 +6,7 @@ appModule = angular.module('aldwebsite', [
   # External modules
   'ui.router'
   'angular-loading-bar'
+  'slick'
 
   # MODULE LIST AUTOGEN BELOW THIS LINE
   'aldwebsite.about'
