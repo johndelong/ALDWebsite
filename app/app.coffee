@@ -7,6 +7,8 @@ appModule = angular.module('aldwebsite', [
   'ui.router'
   'angular-loading-bar'
   'slick'
+  'angulartics'
+  'angulartics.google.analytics'
 
   # MODULE LIST AUTOGEN BELOW THIS LINE
   'aldwebsite.about'

@@ -1,5 +1,5 @@
-<div class="full-screen-banner">
-    <img class="banner-img" style="background-image: url('https://lh3.googleusercontent.com/UhCXwk81ZWJwgOWRU3VPo52rONtZ4gO6_0T66fsI-MsDMZV88b_keqTiAFO1a6HD3iSo10ivsRRHLPHJQLNcUNA-NGq5GckcobBRUEl7UaSpqr8aE84QkwoUmGfP7cDNVVsMen1sW2z5J4zvkSLhNiu1LzjF9wc3n2tpADAiKyNY2DoCDXv7FZsfuzexYYhHqix4VLUEQOGB7W4iG1whEILsfAae3P4Psit3gqmPgyGriNrcVr_tEmclkwLGRo2NsNTYgzezvLZ3Q6fCRpjdpfJPyw1mlYem-om_tE0ckReVVbhJZZ01-O8-tjjgofYg1VDHKNWTNJ7_A-pukC_-F6BOnasScEj3tCxsAsUsD8uDBVhw0h2Rqmu4m8DuDALddFxrxAjzzTIZnmA_UYSazbSLorvJnywldUDTjdR6hzV_EtyrMNoQodN3giw3pfcSR8qP4jippEDjPA_FKuiSzKRLM4Ld1gtmW3rEAgKQRDbddJOhb0KG8L2gIbeueX_UCXFpjS4Ib7pRRQ_EESo_12ooGwRj60P_qcuXaKMG-90=w2500-h1592-no');"/>
+<div class="banner full-screen-banner">
+    <img class="banner-img" style="background-image: url('/assets/contact_me.jpg');"/>
     <div class="color-overlay"></div>
     <div class="title-desc-wrapper">
       <div class="title">Contact Me</div>
@@ -44,7 +44,11 @@
 
         <input type="hidden" name="_next" value="//site.io/thanks.html" />
 
-        <button ng-disabled="!emailForm.$valid" ng-click="contactMe.sendForm()" class="btn waves-effect waves-light" type="submit">
+        <button ng-disabled="!emailForm.$valid" 
+                ng-click="contactMe.sendForm()" 
+                class="btn waves-effect waves-light" 
+                type="submit"
+                analytics-on="click" analytics-event="Contact Me Submission">
           Send <i class="fa fa-paper-plane"></i>
         </button>
     </form>
