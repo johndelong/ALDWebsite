@@ -3,11 +3,16 @@
 #homePage {  
   .reviews {
     margin: auto;
+    overflow: hidden;
     padding-top: $base-spacing;
     padding-bottom: $x-large-spacing;
     max-width: $max-width;
     
     position: relative;
+
+    @media screen and (max-width: 700px) {
+      max-width: 500px;
+    }
   }
 
   .card {
