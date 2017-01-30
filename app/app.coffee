@@ -18,7 +18,7 @@ appModule = angular.module('aldwebsite', [
 ])
 
 appModule.config ($locationProvider) ->
-  $locationProvider.html5Mode(enabled: true, requireBase: false)
+  $locationProvider.html5Mode(enabled: true, requireBase: true)
 
 appModule.config ($urlRouterProvider) ->
   $urlRouterProvider.otherwise('/')
