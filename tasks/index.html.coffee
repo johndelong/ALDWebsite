@@ -7,7 +7,7 @@ htmlmin = require('gulp-htmlmin')
 inject = require('gulp-inject')
 naturalSort = require('gulp-natural-sort')
 revall = require('gulp-rev-all')
-
+replace = require('gulp-replace')
 
 # Builds index.html, injecting a bunch of js and css file references
 gulp.task 'build/dev/index.html', ['build/dev/js', 'build/dev/bower', 'build/dev/templates', 'build/dev/css'], ->
@@ -62,6 +62,7 @@ gulp.task 'build/dist/index.html', ['build/dist/app.js', 'build/dist/app.css'], 
           file.contents.toString('utf8')
     ))
     .pipe(revall(ignore: [ /^\/index.html/ ]))
+    .pipe(replace(/"([^"]*)\?absolute=true"/g, "\"https://amandalynndelong.com$1\""))
     .pipe(htmlmin({
       removeComments: true
       collapseWhitespace: true
