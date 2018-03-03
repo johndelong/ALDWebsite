@@ -11,10 +11,11 @@ import { AppState } from './app.service';
  */
 @Component({
   selector: 'app',
-  encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    './app.component.css'
+    './app.component.css',
+    './app.component.scss',
   ],
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {

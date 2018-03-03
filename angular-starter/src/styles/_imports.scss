@@ -1,0 +1,14 @@
+// This file is used to provide variables/mixins for components and stylesheets
+// that requires functionality outside of standard CSS
+
+// Third party stuff, except grid-settings, which needs to come in before Neat
+// @import 'bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon/core/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
+
+// Our variables
+@import 'imports/variables';
+@import 'imports/grid-settings';
+@import 'imports/mixins';
+@import 'imports/layouts';
+

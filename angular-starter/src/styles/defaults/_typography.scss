@@ -1,0 +1,84 @@
+body {
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1;
+
+  line-height: $base-line-height;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 $small-spacing;
+  line-height: $heading-line-height;
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+}
+
+// Added Changes here
+h1 {
+    font-size: $base-font-size * 2.2;
+    font-weight: 300;
+
+}
+
+h2 {
+  font-size: $base-font-size * 1.6;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: $base-font-size;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+h4 {
+  font-size: $base-font-size * .7;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+// Changes ended
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+a {
+  transition: color 0.1s linear;
+  text-decoration: none;
+  color: $action-color;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 15%);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  margin: ($large-spacing * 2) 0;
+  @media screen and (max-width: $mobile) {
+    margin: ($large-spacing) 0;
+  }
+  border-top: none;
+  border-right: none;
+  border-bottom: $base-border;
+  border-left: none;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}

@@ -1,0 +1,35 @@
+// #{$all-button-inputs},
+button {
+  appearance: none;
+
+  display: inline-block;
+  border: none;
+  border-radius: $base-border-radius;
+  background-color: $site-black;
+  cursor: pointer;
+  padding: 0.75em 1em;
+  vertical-align: middle;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: $base-font-size;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    background-color: tint($site-black, 30%);
+    color: #fff;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+    background-color: $site-black;
+  }
+
+  transition: all 0.25s ease-in-out;
+}
