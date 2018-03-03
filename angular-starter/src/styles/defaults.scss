@@ -1,6 +1,9 @@
 // Just some things I want applied globally to the whole site.
 // This file should not be used anywhere else besides within the styles.scss file.
 
+// This file does not expose variables to each angular component. You still have to
+// do that manually using the @import command.
+
 @import 'imports';
 
 // Sane CSS defaults for html elements

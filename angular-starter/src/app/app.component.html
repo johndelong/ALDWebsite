@@ -1,21 +1,23 @@
-<nav class="header-banner hide-background">
-  <a [routerLink]=" ['./'] "
-    routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-    Index
-  </a>
-  <a [routerLink]=" ['./home'] "
-    routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-    Home
-  </a>
-  <a [routerLink]=" ['./detail'] "
-    routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-    About
-  </a>
-  <a [routerLink]=" ['./barrel'] "
-    routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-    Contact
-  </a>
-</nav>
+<header>
+    <div class="header-banner">
+      <nav class="menu-items">
+        <ul>
+          <!-- <li><a [routerLink]=" ['./'] " routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+            INDEX
+          </a></li> -->
+          <li><a [routerLink]=" ['./home'] " routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+            HOME
+          </a></li>
+          <li><a [routerLink]=" ['./detail'] " routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+            ABOUT
+          </a></li>
+          <li><a class="call-to-action" [routerLink]=" ['./barrel'] " routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+            CONTACT
+          </a></li>
+        </ul>
+      </nav>
+    </div>      
+</header>
 
 <main>
   <router-outlet></router-outlet>
